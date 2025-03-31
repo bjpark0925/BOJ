@@ -1,28 +1,22 @@
 from collections import deque
 
 n, m = map(int, input().split())
-
-# ✅ 미로 입력 방식 개선
 miro = [list(map(int, input().strip())) for _ in range(n)]
 
-# BFS 초기화
-bfs_queue = deque([(0, 0)])
-visited = [[0] * m for _ in range(n)]
-visited[0][0] = 1  # 시작 위치 방문 처리
+bfs_queue = deque([(0,0)])
+visited = [[0 for _ in range(m)] for _ in range(n)]
+visited[0][0] = 1
 
-# 이동 방향 (하, 우, 상, 좌)
-directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+directions = [(-1,0), (1,0), (0,-1), (0,1)] # 상하좌우
 
-# BFS 실행
 while bfs_queue:
-    x, y = bfs_queue.popleft()
+    prev_row, prev_col = bfs_queue.popleft()
+    
+    for d_row, d_col in directions:
+        row = prev_row + d_row
+        col = prev_col + d_col
+        if row >= 0 and row < n and col >= 0 and col < m and miro[row][col] and not visited[row][col]:
+            bfs_queue.append((row, col))
+            visited[row][col] = visited[prev_row][prev_col] + 1
 
-    # 네 방향 탐색
-    for dx, dy in directions:
-        nx, ny = x + dx, y + dy
-        if 0 <= nx < n and 0 <= ny < m and miro[nx][ny] == 1 and not visited[nx][ny]:
-            bfs_queue.append((nx, ny))
-            visited[nx][ny] = visited[x][y] + 1
-
-# 최단 거리 출력
 print(visited[n-1][m-1])
