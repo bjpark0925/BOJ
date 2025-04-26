@@ -1,4 +1,6 @@
 # 모노톤 체인
+import sys
+input = sys.stdin.readline
 n = int(input())
 
 # 점을 x좌표 순으로 정렬(같으면 y좌표 순)
