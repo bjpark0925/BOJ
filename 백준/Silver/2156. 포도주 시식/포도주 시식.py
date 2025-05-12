@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 arr = []
 for _ in range(n):
@@ -13,4 +16,5 @@ for i in range(3, n):
     dp[i] = max(dp[i-1], dp[i-3] + arr[i-1] + arr[i], dp[i-2] + arr[i]) # 명단제외 or [i-3, i-1, i] or [i-2, i]
 
 #print(dp)
-print(max(dp))
+#print(max(dp))
+print(dp[n-1])
