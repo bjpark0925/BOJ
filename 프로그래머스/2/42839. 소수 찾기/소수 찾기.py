@@ -1,6 +1,7 @@
 def solution(numbers):
     answer = 0
-    chae = [True] * 10**7
+    l = len(numbers)
+    chae = [True] * 10**l
     chae[0] = False
     chae[1] = False
     for i in range(2, len(chae)):
@@ -11,8 +12,7 @@ def solution(numbers):
         for j in range(i*2, len(chae), i):
             chae[j] = False
     #print(chae)
-    
-    l = len(numbers)
+
     answer_set = set()
     
     def dfs(old, new, visited_index):
