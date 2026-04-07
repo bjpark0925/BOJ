@@ -1,10 +1,10 @@
 # [level 3] 디스크 컨트롤러 - 42627 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42627) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42627?language=cpp) 
 
 ### 성능 요약
 
-메모리: 9.24 MB, 시간: 16.38 ms
+메모리: 4.2 MB, 시간: 0.17 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 09월 13일 16:00:31
+2026년 04월 07일 19:45:14
 
 ### 문제 설명
 
