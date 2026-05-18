@@ -1,10 +1,10 @@
 # [level 2] 기능개발 - 42586 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42586) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42586?language=cpp) 
 
 ### 성능 요약
 
-메모리: 9.27 MB, 시간: 0.61 ms
+메모리: 4.07 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 10월 10일 16:15:05
+2026년 05월 18일 12:45:51
 
 ### 문제 설명
 
